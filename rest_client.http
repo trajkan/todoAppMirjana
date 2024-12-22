@@ -1,0 +1,39 @@
+
+GET http://localhost:3000/tasks
+
+###
+
+GET http://localhost:3000/tasks?completed=false
+
+###
+GET http://localhost:3000/tasks/categories
+###
+GET http://localhost:3000/tasks/categories/Grocery
+
+###
+
+POST http://localhost:3000/tasks
+Content-Type: application/json
+
+{
+    "category": "Meetings",
+    "description": "Lunch meeting with Bob"
+}
+
+###
+PUT http://localhost:3000/tasks/6767274f90fef4b8789a15c6
+Content-Type: application/json
+
+{
+    "description": "Chocolate"
+}
+
+###
+PUT http://localhost:3000/tasks/6767274f90fef4b8789a15c6/complete
+
+###
+DELETE http://localhost:3000/tasks/676723692eb309a2379f82c5
+###
+
+DELETE http://localhost:3000/deleteAll
+
